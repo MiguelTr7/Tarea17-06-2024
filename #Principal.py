@@ -3,10 +3,11 @@ import time
 #Creamos un menu de 4 opciones 
 Cargos = ["CEO" , "Desarollador" , "ANALista de datos"]
 while True:
-    print ("1.- Registrar trabajador")
-    print ("2.- Listar todos los trabajdores")
-    print ("3.- Imprimir planillas del sueldo")
-    print ("4.- Salir del programa")
+    print("\n--- Menú Principal ---");
+    print("1. Registrar trabajador");
+    print("2. Listar todos los trabajadores");
+    print("3. Imprimir planilla de sueldos");
+    print("4. Salir del programa");
     try:
         opc = input ("-> ")
     except ValueError:#mensaje de error 
