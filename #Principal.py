@@ -1,4 +1,5 @@
 import time
+import 
 
 #Creamos un menu de 4 opciones 
 Cargos = ["CEO" , "Desarollador" , "ANALista de datos"]
