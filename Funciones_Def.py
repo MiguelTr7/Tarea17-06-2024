@@ -22,10 +22,9 @@ def registro():
     print("Trabajador registrado exitosamente.")
 
 def Boleta():
- with open('nuevo_archivo.csv', 'r', newline='') as archivo_csv:
-    lector_csv = csv.reader(archivo_csv)
-    for fila in lector_csv:
-        print(fila);
+ with open('archivo_nuevo.txt', 'r') as archivo:
+  contenido = archivo.read();
+  print(contenido);
 def lista_registro():
    
    
