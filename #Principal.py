@@ -28,9 +28,5 @@ while True:
             print (4)
         else: 
             print ("Ingrese un caracter del 1 al 4")
-<<<<<<< HEAD
             time.sleep (2)
             print ("..")
-=======
->>>>>>> 8b99c8ccb5ba0588ee8811bdb2536c1141e31f4d
->>>>>>> 172ddbb45f4076090151f0ed7a167cf95d56e113
