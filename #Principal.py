@@ -1,12 +1,8 @@
-<<<<<<< HEAD
+
 import time
 import
 
-=======
-<<<<<<< HEAD
 #permita registrar los sueldos brutos de los trabajadores y calcular el líquido a pagar
-=======
->>>>>>> 172ddbb45f4076090151f0ed7a167cf95d56e113
 Cargos = ["CEO" , "Desarollador" , "ANALista de datos"]
 while True:
     print ("1.- Registrar trabajador")
