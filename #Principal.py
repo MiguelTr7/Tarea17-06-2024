@@ -1,3 +1,6 @@
+import time
+import
+
 Cargos = ["CEO" , "Desarollador" , "ANALista de datos"]
 while True:
     print ("1.- Registrar trabajador")
@@ -19,3 +22,5 @@ while True:
             print (4)
         else: 
             print ("Ingrese un caracter del 1 al 4")
+            time.sleep (2)
+            print ("..")
