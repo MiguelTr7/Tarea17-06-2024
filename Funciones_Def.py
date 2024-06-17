@@ -18,6 +18,7 @@ def Boleta():
     lector_csv = csv.reader(archivo_csv)
     for fila in lector_csv:
         print(fila)
+        
 
 
      
