@@ -1,7 +1,7 @@
 import Funciones_Def as funcion
 import time
 #Creamos un menu de 4 opciones 
-Cargos = ["CEO" , "Desarollador" , "ANALista de datos"]
+Cargos = ["CEO" , "Desarollador" , "Analista de datos"]
 while True:
     print ("1.- Registrar trabajador")
     print ("2.- Listar todos los trabajdores")
