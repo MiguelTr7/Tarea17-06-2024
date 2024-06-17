@@ -1,0 +1,1 @@
+#permita registrar los sueldos brutos de los trabajadores y calcular el líquido a pagar
