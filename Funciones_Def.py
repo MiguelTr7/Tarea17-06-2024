@@ -16,7 +16,7 @@ def registro():
         'Descuento AFP': desc_afp,
         'Sueldo Líquido': sueldo_liquido
     })
-    desc_salud=(sueldo_bruto*des_salud );
+    desc_salud=(sueldo_bruto*des_salud);
     desc_afp=(sueldo_bruto*des_afp);
     sueldo_liquido=(sueldo_bruto-desc_salud-desc_afp);
     print("Trabajador registrado exitosamente.")
