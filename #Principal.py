@@ -1,5 +1,5 @@
 import time
-import 
+import Definicines_Def as funcion
 
 #Creamos un menu de 4 opciones 
 Cargos = ["CEO" , "Desarollador" , "ANALista de datos"]
