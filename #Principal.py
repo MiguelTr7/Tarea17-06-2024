@@ -14,7 +14,7 @@ while True:
         print ("Ingrese un caracter del 1 al 4")
     else:
         if opc == "1":
-        
+         resgistro():
             print (1)
         elif opc == "2":
             print (2)
