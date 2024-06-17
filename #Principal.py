@@ -1,6 +1,6 @@
 import time
 
-#permita registrar los sueldos brutos de los trabajadores y calcular el líquido a pagar
+#Creamos un menu de 4 opciones 
 Cargos = ["CEO" , "Desarollador" , "ANALista de datos"]
 while True:
     print ("1.- Registrar trabajador")
@@ -9,7 +9,7 @@ while True:
     print ("4.- Salir del programa")
     try:
         opc = input ("-> ")
-    except ValueError:
+    except ValueError:#mensaje de error 
         print ("Ingrese un caracter del 1 al 4")
     else:
         if opc == "1":

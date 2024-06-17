@@ -16,3 +16,4 @@ def Boleta():
 
 def lista_trabajadores():
   for i in lista_trabajadores:
+     
