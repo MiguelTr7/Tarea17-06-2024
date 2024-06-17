@@ -1,6 +1,4 @@
-
 import time
-import
 
 #permita registrar los sueldos brutos de los trabajadores y calcular el líquido a pagar
 Cargos = ["CEO" , "Desarollador" , "ANALista de datos"]
