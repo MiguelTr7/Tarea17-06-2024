@@ -3,16 +3,12 @@ import time
 #Creamos un menu de 4 opciones 
 Cargos = ["CEO" , "Desarollador" , "Analista de datos"]
 
-#Usuarios
-
+#Usuarios  
 user_1 = "Pablom"
-
 user_2 = "SinNombre"
 
 #Contraseñas
-
 pass_1 = "1234"
-
 pass_2 = "4321"
 
 #Inicio Login
@@ -45,23 +41,19 @@ while True:
                 print (funcion.Lista_registro)
             elif opc == "3":   #Imrpimir planillas ,,,
                 try:
-                    imp = input ("1.- Imprimir todas las planillas \n2.- Imprimir una planilla \n3.- Salir \n-> ")
+                    imp = input ("1.- Imprimir todas las planillas \n2.- Imprimir una planilla \n-> ")
                 except ValueError:
-                    print ("Elija una opcion del 1 al 3")
+                    print ("Elija una opcion del 1 al 2")
                 else:
                     if imp == "1":
                         print ()
                     elif imp == "2":
                         print ()
-                    elif imp == "3":
-                        print
                     else:
                         print ("Elija una opcion valida")
-
             elif opc == "4":   #Salir del programa ,,,
                 print ("Gracias por usar el programa, vuelva pronto.")
                 quit()
-
             else: 
                 print ("Ingrese un caracter del 1 al 4")
                 time.sleep(2)
@@ -78,3 +70,4 @@ while True:
         time.sleep (2)
         print ()
         print ()
+#Fin del programa ,,,
