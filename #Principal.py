@@ -1,6 +1,5 @@
-import time
 import Funciones_Def as funcion
-
+import time
 #Creamos un menu de 4 opciones 
 Cargos = ["CEO" , "Desarollador" , "ANALista de datos"]
 while True:
@@ -14,15 +13,15 @@ while True:
         print ("Ingrese un caracter del 1 al 4")
     else:
         if opc == "1":
-         resgistro():
-            print (1)
+         funcion.registro();
+         print ("")
         elif opc == "2":
-            print (2)
+            print ("")
         elif opc == "3":
-            print (3)
+            print ("")
         elif opc == "4":
-            print (4)
+            print ("")
         else: 
             print ("Ingrese un caracter del 1 al 4")
-            time.sleep (2)
+            time.sleep(2)
             print ("..")
