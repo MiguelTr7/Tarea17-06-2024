@@ -2,26 +2,24 @@ import Funciones_Def as funcion
 import time
 #Creamos un menu de 4 opciones 
 Cargos = ["CEO" , "Desarollador" , "Analista de datos"]
-
-#Usuarios  
-user_1 = "Pablom"
-user_2 = "SinNombre"
-
+#Usuarios
+user_1 = "miguel"
+user_2 = "mati"
 #Contraseñas
 pass_1 = "1234"
 pass_2 = "4321"
 
 #Inicio Login
 print ("**** LOGIN ****")
-while True:
-    user = input ("Ingrese nombre de usuario: ")
-    passw = input ("Ingrese la contraseña: ")
-    if user == user_1 and passw == pass_1 or user == user_2 and passw == pass_2:
-        time.sleep (2)
+user = input ("Ingrese nombre de usuario: ").lower();
+passw = input ("Ingrese la contraseña: ").lower();
+if user == user_1 and passw == pass_1 or user == user_2 and passw == pass_2:
+ print ("Bienvenido al sistema")
+ while True:
+        time.sleep (1)
         print ("..")
-        time.sleep (2)
-        print ("Bienvenido al sistema")
-        time.sleep (2)
+        time.sleep (1)
+        time.sleep (1)
         print ("...")
         time.sleep (1)
         print ("1.- Registrar trabajador")
@@ -40,25 +38,29 @@ while True:
             elif opc == "2":   #Listar trabajadores ,,,
                 print (funcion.Lista_registro)
             elif opc == "3":   #Imrpimir planillas ,,,
+                funcion.imprimir_planilla
                 try:
-                    imp = input ("1.- Imprimir todas las planillas \n2.- Imprimir una planilla \n-> ")
+                    imp = input ("1.- Imprimir todas las planillas \n2.- Imprimir una planilla \n3.- Salir \n-> ")
                 except ValueError:
-                    print ("Elija una opcion del 1 al 2")
+                    print ("Elija una opcion del 1 al 3")
                 else:
                     if imp == "1":
                         print ()
                     elif imp == "2":
                         print ()
+                    elif imp == "3":
+                        print
                     else:
                         print ("Elija una opcion valida")
+
             elif opc == "4":   #Salir del programa ,,,
                 print ("Gracias por usar el programa, vuelva pronto.")
-                quit()
+                break;
             else: 
                 print ("Ingrese un caracter del 1 al 4")
                 time.sleep(2)
                 print ("..")
-    else:
+else:
         time.sleep (2)
         print ("..")
         time.sleep (2)
@@ -69,5 +71,4 @@ while True:
         print ("..")
         time.sleep (2)
         print ()
-        print ()
-#Fin del programa ,,,
+        print ();
