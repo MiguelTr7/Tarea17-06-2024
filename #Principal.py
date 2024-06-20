@@ -1,74 +1,46 @@
-import Funciones_Def as funcion
+import funciones as funcion
 import time
-#Creamos un menu de 4 opciones 
-Cargos = ["CEO" , "Desarollador" , "Analista de datos"]
-#Usuarios
-user_1 = "miguel"
-user_2 = "mati"
-#Contraseñas
-pass_1 = "1234"
-pass_2 = "4321"
-
-#Inicio Login
-print ("**** LOGIN ****")
-user = input ("Ingrese nombre de usuario: ").lower();
-passw = input ("Ingrese la contraseña: ").lower();
-if user == user_1 and passw == pass_1 or user == user_2 and passw == pass_2:
- print ("Bienvenido al sistema")
- while True:
-        time.sleep (1)
-        print ("..")
-        time.sleep (1)
-        time.sleep (1)
-        print ("...")
-        time.sleep (1)
-        print ("1.- Registrar trabajador")
-        print ("2.- Listar todos los trabajdores")
-        print ("3.- Imprimir planillas del sueldo")
-        print ("4.- Salir del programa")
-        try:
-            opc = input ("-> ")
-        except ValueError:    #Mensaje de error ,,,
-            print ("Ingrese un caracter del 1 al 4")
-        else:
-            if opc == "1":    #Registro ,,,,
-                funcion.registro();
-                print()
-                time.sleep (2)
-            elif opc == "2":   #Listar trabajadores ,,,
-                print (funcion.Lista_registro)
-            elif opc == "3":   #Imrpimir planillas ,,,
-                funcion.imprimir_planilla
-                try:
-                    imp = input ("1.- Imprimir todas las planillas \n2.- Imprimir una planilla \n3.- Salir \n-> ")
-                except ValueError:
-                    print ("Elija una opcion del 1 al 3")
+import os
+flag=True
+logged_in = False
+usuarios_registrados={'miguel':'123',
+                      'arturo':'321',
+                      'cait':'234'}
+while flag:
+    usuario=input("Ingrese su usuario: -> ");
+    contraseña=input("Ingrese su contraseña: -> ");
+    if  usuario in usuarios_registrados and contraseña == usuarios_registrados[usuario]:
+        time.sleep(0.5)
+        print(f"El inicio de sesion fue exitoso. !Bienvenid@ - @{usuario} ¡");
+        time.sleep(0.5)
+        logged_in = True
+        while logged_in:
+            print("\n:::: MENÚ DE OPCIONES ::::\n")
+            print("1.- Registrar trabajador.")
+            print("2.- Listar todos los trabajadores.")
+            print("3.- Imprimir planilla de sueldos.")
+            print("4.- Salir del programa.")
+            try:
+             opcion=int(input("Ingrese una opcion:-> "));    
+            except ValueError:
+                print("Ingrese una opcion valida del 1 al 4 ");
+                continue;
+            else:
+                if opcion==1:
+                    print(":::Registrar trabajador:::\n") 
+                    funcion.resgistros();  
+                elif opcion == 2 :
+                    print(":::Listar todos los trabajadores:::\n")
+                    funcion.monstrar_trabajadores();
+                elif opcion == 3:
+                    print(":::Imprimir planilla de sueldos:::\n")
+                    funcion.crear_plantilla_txt
+                elif opcion == 4:
+                    print("...Saliendo del programa...")
+                    time.sleep(1)
+                    flag=False;
+                    logged_in= False   
                 else:
-                    if imp == "1":
-                        print ()
-                    elif imp == "2":
-                        print ()
-                    elif imp == "3":
-                        print
-                    else:
-                        print ("Elija una opcion valida")
-
-            elif opc == "4":   #Salir del programa ,,,
-                print ("Gracias por usar el programa, vuelva pronto.")
-                break;
-            else: 
-                print ("Ingrese un caracter del 1 al 4")
-                time.sleep(2)
-                print ("..")
-else:
-        time.sleep (2)
-        print ("..")
-        time.sleep (2)
-        print ("Ingrese un nombre de usuario valido.")
-        time.sleep (2)
-        print ("..")
-        time.sleep (2)
-        print ("..")
-        time.sleep (2)
-        print ()
-        print ();
+                    print("Ingrese una opción válida del 1 al 4")         
+    else:
+     print("\nCredenciales invalidas. Por favor, vuelva a intentarlo.\n")
