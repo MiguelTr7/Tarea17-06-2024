@@ -1,15 +1,21 @@
+import time
 cargo_disponibles = ["Ceo","Desarrollador","Administrador"]
 lista_registros=[]
 #Definir los registros
 def resgistros():
     nombre=input("ingrese su nombre: -> ").title()
+    time.sleep(0.3)
     apellido=input("Ingrese su apellido: -> ").title()
+    time.sleep(0.3)
     cargo=input(f"Cargos disponibles {cargo_disponibles} \nIngrese su cargo: -> ").title();
+    time.sleep(0.3)
     while cargo not in cargo_disponibles :
         print("Cargo no valido.Los cargos disponibles son:", cargo_disponibles);
         cargo=input("Ingrese el cargo del trabajador nuevamente: -> ").title();
+        time.sleep(0.3)
     try:  
      sueldo=int(input("Ingrese su sueldo bruto: -> "));
+     time.sleep(0.3)
     except ValueError:
      print("Ingrese caracteres validos.");
     trabajador={'Nombre':nombre,
@@ -18,6 +24,7 @@ def resgistros():
                 'Sueldo':sueldo};
     lista_registros.append(trabajador);
     print(":Trabajador registrado exitosamente:");
+    time.sleep(0.3)
     crear_plantilla_txt(nombre,apellido,cargo,sueldo);
 #Para calcular los descuentos
 def calcular_sueldo_liquido (sueldo_bruto):
@@ -46,4 +53,4 @@ def monstrar_trabajadores():
          apellido = trabajador['Apellido']
          cargo = trabajador['Cargo']
          print(f"{i}-. {nombre} {apellido}- {cargo}")
-         
+         time.sleep(0.3)
