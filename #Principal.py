@@ -8,6 +8,7 @@ usuarios_registrados={'miguel':'123',
                       'cait':'234'}
 while flag:
     usuario=input("Ingrese su usuario: -> ");
+    time.sleep(0.3)
     contraseña=input("Ingrese su contraseña: -> ");
     if  usuario in usuarios_registrados and contraseña == usuarios_registrados[usuario]:
         time.sleep(0.5)
@@ -38,6 +39,11 @@ while flag:
                 elif opcion == 4:
                     print("...Saliendo del programa...")
                     time.sleep(1)
+                    try:
+                     os.remove("registros_usuarios.txt")
+                     print("El archivo 'registro_usuarios.txt' ha sido eliminado.")
+                    except FileNotFoundError:
+                        print("El archivo 'registro_usuarios.txt' no fue encontrado")
                     flag=False;
                     logged_in= False   
                 else:
